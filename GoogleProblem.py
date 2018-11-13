@@ -16,26 +16,23 @@ def get_and_sort(n):
 def findSum(lst, sum):
 
     print("Sum: " + str(sum))
-    i = 0
-    j = len(lst) - 1
+    left = 0
+    right = len(lst) - 1
     comp = 0
-    while lst[j] > sum:
+    while lst[right] > sum:
         comp += 1
-        j-=1
+        right -= 1
 
-    print("max found, comps: " + str(comp))
-    while i != j:
+    while left != right:
 
-        #print("Total: " + str(lst[i] + lst[j]))
-        if lst[i] +lst[j] == sum:
-            print("Total comparrisons: " + str(comp))
+        if lst[left] + lst[right] == sum:
             return True
-        elif lst[i] + lst[j] >sum:
+        elif lst[left] + lst[right] > sum:
             comp += 1
-            j-=1
+            left -= 1
         else:
             comp += 1
-            i+=1
+            right += 1
 
     return False
 
@@ -58,12 +55,12 @@ def main():
     n = handle_opt(sys.argv)
 
     lst = get_and_sort(n)
-    #print(lst)
+
     flag = findSum(lst, 120)
     if flag == True:
-        print("ayyy")
+        print("Matching pair found")
     else:
-        print("10 ply bud")
+        print("No pair found")
 
 if __name__ == "__main__":
     main()
