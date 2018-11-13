@@ -48,7 +48,7 @@ def handle_opt(argv):
 			return int(argv[1])
 
 		except ValueError:
-			print("Type Error: sequence_length must be an integer")
+			print("Type Error: argument must be an integer")
 			sys.exit(1)
 def main():
 
