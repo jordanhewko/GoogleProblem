@@ -16,6 +16,7 @@ Can you find a pair within the list that adds to the integer?
 
 Some notes about my solution:
 
-* My solution is in Python. 
-* I used command line arguments to randomly generate a list of n elements.
-* I searched for the number 120
+* My solution is implemented using Python
+* I use command line arguments to randomly generate a list of n elements, from a range of [0,100]
+* I search for the number 120
+* My solution has a linear growth rate (proof to be added later)
