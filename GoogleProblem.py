@@ -4,12 +4,12 @@ import sys
 def get_and_sort(n):
 
     lst = [0] * n
-    
+
     for i in range(0, n):
-    
+
         rando = random.randint(0,100)
-        lst[i] = rando 
-    
+        lst[i] = rando
+
     lst.sort()
     return lst
 
@@ -22,7 +22,7 @@ def findSum(lst, sum):
     while lst[j] > sum:
         comp += 1
         j-=1
-    
+
     print("max found, comps: " + str(comp))
     while i != j:
 
